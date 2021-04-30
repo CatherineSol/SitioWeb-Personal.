@@ -1,0 +1,51 @@
+<html>
+
+<head>
+<title>TRAFICO</title>
+<style type="text/css">
+      INPUT	{
+        font-size: 9px; 
+        font-family: Verdana;
+        color:#000000;
+        background-color:#B9E927;
+        border:none;
+}
+</style>
+<script LANGUAGE="JavaScript" SRC="trafico.js"></script>
+</head>
+
+<body bgcolor="#94BD06" onLoad="document.forms.reset();"
+style="font-family: Verdana; font-size: 8pt; font-weight: normal">
+<script language="JavaScript">
+
+var img1=new Image(60,60);
+img1.src="asfalto.gif";      //calzada
+var img2=new Image(60,60);
+img2.src="auto.gif";      //coche
+var img3=new Image(60,60);
+img3.src="rival.gif";
+var img4=new Image(60,60);
+img4.src="crash.gif";  
+var img5=new Image(360,40);
+img5.src="ciudad.gif";
+var img6=new Image(360,40);
+img6.src="ciudad.gif";
+var img7=new Image(60,60);
+img7.src="camion.gif";
+var i,j;
+document.write("<center><form name='forms'><input type='button' value='JUGAR' onClick='rivalcar();'> <input type=button value='REINICIAR' onClick='JavaScript:location.reload();'><BR><BR><img src='ciudad.gif' width=360 height=40><br>");
+for(j=0;j<4;j++){
+	for(i=0;i<6;i++){
+		if(i==0 && j==0) document.write("<img src='auto.gif' width=60 height=60>");
+		else{
+			document.write("<img src='asfalto.gif' width=60 height=60>");
+		}
+	}
+	document.write("<BR>");
+}
+document.write("<BR>TIEMPO: <input type='text' size='5' name='time'> RIVALES ADELANTADOS: <input type=text size=10 name='cars'> VELOCIDAD: <input type=text size=3 name='carspd'><br>VIAJAMOS DESDE <input type='text' size='12' name='here'> <input type='text' size='20' name='mark'> <input type='text' size='12' name='next'>");
+document.write(" ES EL DESTINO<BR><BR><input type='button' value='ARRIBA' onClick='up();'> <input type=button value='ACELERAR' onClick='spdup();'><BR><BR><input type='button' value='ABAJO' onClick='down();'> <input type=button value='FRENAR' onClick='spddown();'></form><br></center>");
+</script>
+
+</body>
+</html>
